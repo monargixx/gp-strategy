@@ -1,0 +1,546 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Горный Портал · стратегия роста</title>
+<meta name="description" content="Стратегия роста Instagram и Telegram «Горного Портала» на 12 месяцев. Полина Данилова, ноябрь 2026">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --forest:#1F3A2E; --forest2:#2A4A3B; --graphite:#2B2D2F; --milk:#F3EFE6; --milk2:#E8E2D5;
+  --gray:#8C8F8A; --ochre:#C8792B; --ink:#1d1f1e;
+  --u:min(1vw, 1.7778vh);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{background:#141615;scroll-snap-type:y mandatory;scroll-behavior:smooth}
+body{font-family:'Montserrat',system-ui,sans-serif;color:var(--ink);background:#141615;-webkit-font-smoothing:antialiased}
+.slide{position:relative;height:100vh;display:flex;align-items:center;justify-content:center;scroll-snap-align:start;overflow:hidden}
+.stage{position:relative;width:calc(var(--u)*100);height:calc(var(--u)*56.25);padding:calc(var(--u)*5) calc(var(--u)*6);overflow:hidden;display:flex;flex-direction:column}
+.dark .stage{color:var(--milk)}
+.milk .stage{background:var(--milk)}
+.green .stage{background:var(--forest)}
+.graph .stage{background:var(--graphite)}
+.bgimg{position:absolute;inset:0;background-size:cover;background-position:center}
+.bgimg::after{content:"";position:absolute;inset:0;background:rgba(15,22,18,.42)}
+
+/* типографика */
+.lab{font-size:max(10px,calc(var(--u)*.78));letter-spacing:.2em;text-transform:uppercase;font-weight:500;color:var(--gray)}
+.dark .lab{color:rgba(243,239,230,.62)}
+.corner{position:absolute;top:calc(var(--u)*2.4);left:calc(var(--u)*6);right:calc(var(--u)*6);display:flex;justify-content:space-between;z-index:3}
+h1{font-weight:200;font-size:calc(var(--u)*6.4);line-height:1.02;letter-spacing:-.02em}
+h2{font-weight:300;font-size:calc(var(--u)*3.5);line-height:1.08;letter-spacing:-.015em;margin:calc(var(--u)*1.4) 0 calc(var(--u)*2.4);max-width:85%}
+h3{font-weight:500;font-size:max(13px,calc(var(--u)*1.2));line-height:1.3;margin-bottom:calc(var(--u)*.5)}
+p,li,td,th{font-size:max(12.5px,calc(var(--u)*1.12));line-height:1.45;font-weight:400}
+.big{font-weight:200;font-size:calc(var(--u)*5.6);line-height:1;letter-spacing:-.03em}
+.ochre{color:var(--ochre)}
+.muted{color:var(--gray)}
+.dark .muted{color:rgba(243,239,230,.65)}
+.note{font-size:max(11px,calc(var(--u)*.9));color:var(--gray);font-style:normal}
+.dark .note{color:rgba(243,239,230,.6)}
+.lines{list-style:none}
+.lines li{padding:calc(var(--u)*.75) 0;border-top:1px solid rgba(43,45,47,.18)}
+.lines li:last-child{border-bottom:1px solid rgba(43,45,47,.18)}
+.dark .lines li{border-color:rgba(243,239,230,.2)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:calc(var(--u)*5)}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:calc(var(--u)*3)}
+.flex1{flex:1;min-height:0}
+.bottom{margin-top:auto}
+.concl{margin-top:auto;padding-top:calc(var(--u)*1.2);border-top:1px solid var(--ochre);font-size:max(13px,calc(var(--u)*1.25));font-weight:500;max-width:80%}
+.dark .concl{color:var(--milk)}
+table{width:100%;border-collapse:collapse}
+th{font-size:max(10px,calc(var(--u)*.78));letter-spacing:.16em;text-transform:uppercase;font-weight:500;color:var(--gray);text-align:left;padding:0 calc(var(--u)*1) calc(var(--u)*.6) 0}
+td{padding:calc(var(--u)*.7) calc(var(--u)*1) calc(var(--u)*.7) 0;border-top:1px solid rgba(43,45,47,.18);vertical-align:top;font-size:max(12px,calc(var(--u)*1.02))}
+.dark td{border-color:rgba(243,239,230,.2)}
+td b{font-weight:600}
+
+/* 01 обложка */
+.cover .stage{justify-content:flex-end}
+.cover h1{max-width:70%;position:relative}
+.cover .sub{font-weight:300;font-size:calc(var(--u)*1.7);margin-top:calc(var(--u)*1.6);max-width:60%;position:relative}
+.cover .by{position:relative;margin-top:calc(var(--u)*3.2)}
+
+/* 02 */
+.statement{font-weight:200;font-size:calc(var(--u)*5);line-height:1.08;letter-spacing:-.02em;max-width:88%;margin-top:calc(var(--u)*4)}
+.statement em{font-style:normal;color:var(--ochre)}
+.trio{margin-top:auto;display:grid;grid-template-columns:repeat(3,1fr);gap:calc(var(--u)*3)}
+.trio div{border-top:1px solid var(--ink);padding-top:calc(var(--u)*1)}
+.num{font-weight:200;font-size:calc(var(--u)*2.2);color:var(--ochre);display:block;margin-bottom:calc(var(--u)*.4)}
+
+/* 03 */
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:calc(var(--u)*2);margin-bottom:calc(var(--u)*2.2)}
+.kpis .big{font-size:calc(var(--u)*5)}
+.kpis .lab{display:block;margin-top:calc(var(--u)*.6)}
+
+/* 04 */
+.mult{display:grid;grid-template-columns:1fr 1fr 1.3fr;gap:calc(var(--u)*3);align-items:end}
+.stack{display:flex;height:calc(var(--u)*3.4);margin:calc(var(--u)*1.2) 0 calc(var(--u)*.8)}
+.stack span{display:block;height:100%}
+.legend{display:grid;grid-template-columns:repeat(5,1fr);gap:calc(var(--u)*1.2)}
+.legend div{font-size:max(11.5px,calc(var(--u)*.95));line-height:1.35;border-top:1px solid rgba(43,45,47,.25);padding-top:calc(var(--u)*.5)}
+.legend b{display:block;font-weight:300;font-size:calc(var(--u)*2.1)}
+.sw{display:inline-block;width:.8em;height:.8em;margin-right:.4em;vertical-align:-.05em}
+
+/* 06 хребет */
+.ridge{width:100%;height:auto;display:block;margin:calc(var(--u)*.5) 0 calc(var(--u)*1.5)}
+.ridge text{font-family:Montserrat,sans-serif;fill:var(--milk)}
+
+/* 08 reels */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:calc(var(--u)*1.4) calc(var(--u)*2)}
+.card{border-top:1px solid rgba(243,239,230,.35);padding-top:calc(var(--u)*.9)}
+.card .hook{font-weight:300;font-size:max(14px,calc(var(--u)*1.45));line-height:1.25;margin:calc(var(--u)*.5) 0 calc(var(--u)*.6)}
+.card p{font-size:max(11.5px,calc(var(--u)*.95));color:rgba(243,239,230,.7)}
+
+/* 09 */
+.vs h3{font-weight:300;font-size:calc(var(--u)*2.6);margin-bottom:calc(var(--u)*.3)}
+.plate{margin-top:auto;background:var(--forest);color:var(--milk);padding:calc(var(--u)*1.3) calc(var(--u)*1.8);display:grid;grid-template-columns:auto 1fr;gap:calc(var(--u)*2);align-items:center}
+.plate .lab{color:var(--ochre)}
+
+/* 10 воронка */
+.funnel{display:grid;grid-template-columns:repeat(8,1fr);align-items:end;flex:1;min-height:0;margin-top:calc(var(--u)*1)}
+.step{border-top:1px solid var(--milk);border-left:1px solid rgba(243,239,230,.35);padding:calc(var(--u)*.8) calc(var(--u)*.8) 0;height:var(--h)}
+.step .n{font-weight:200;font-size:calc(var(--u)*2.4);color:var(--ochre);line-height:1}
+.step h3{font-size:max(12px,calc(var(--u)*1.02));margin:calc(var(--u)*.5) 0 calc(var(--u)*.3)}
+.step p{font-size:max(11px,calc(var(--u)*.86));color:rgba(243,239,230,.65);line-height:1.35}
+.loop{margin-top:calc(var(--u)*1.2);display:flex;align-items:center;gap:calc(var(--u)*1)}
+.loop i{flex:1;height:1px;background:var(--ochre);position:relative}
+.loop i::before{content:"";position:absolute;left:-1px;top:calc(var(--u)*-.45);border:calc(var(--u)*.45) solid transparent;border-right-color:var(--ochre);border-left:0}
+
+/* 11 */
+.mech{display:grid;grid-template-columns:1fr 1fr;gap:0 calc(var(--u)*4)}
+.mech li{display:grid;grid-template-columns:calc(var(--u)*3) 1fr}
+.mech .k{font-weight:200;color:var(--ochre);font-size:calc(var(--u)*1.5);line-height:1.1}
+.cut{position:absolute;right:0;bottom:0;width:42%;mix-blend-mode:multiply;opacity:.22;pointer-events:none}
+
+/* 12 сезоны */
+.year{display:grid;grid-template-columns:repeat(4,1fr);margin-bottom:calc(var(--u)*2.4)}
+.year div{border-top:2px solid var(--c);padding:calc(var(--u)*.8) calc(var(--u)*1.5) 0 0}
+.year h3{font-weight:300;font-size:calc(var(--u)*2)}
+.year p{font-size:max(11.5px,calc(var(--u)*.98));color:rgba(243,239,230,.72)}
+
+/* 13 план */
+.plan{display:grid;grid-template-columns:repeat(5,1fr);gap:calc(var(--u)*1.4);margin-bottom:calc(var(--u)*2)}
+.plan div{border-top:1px solid var(--ink);padding-top:calc(var(--u)*.7)}
+.plan .m{font-weight:200;font-size:calc(var(--u)*2.2);color:var(--ochre);line-height:1}
+.plan p{font-size:max(11.5px,calc(var(--u)*.95));margin-top:calc(var(--u)*.5)}
+.plan .t{display:block;color:var(--gray);margin-top:calc(var(--u)*.5)}
+.kpi2 li{font-size:max(11.5px,calc(var(--u)*.98));padding:calc(var(--u)*.45) 0}
+
+/* 15 финал */
+.final .stage{justify-content:center}
+.final .statement{margin-top:0;position:relative;max-width:80%}
+.sign{position:relative;margin-top:calc(var(--u)*4);font-size:max(11px,calc(var(--u)*.92));color:rgba(243,239,230,.8);line-height:1.6}
+
+/* служебное */
+.ui{position:fixed;bottom:12px;right:16px;z-index:10;display:flex;gap:8px}
+.final .bgimg{background-size:auto 165%!important;background-position:62% 100%!important}
+.final .bgimg::after{background:rgba(12,18,15,.62)}
+.ui button{font:500 11px Montserrat,sans-serif;letter-spacing:.16em;text-transform:uppercase;background:rgba(20,22,21,.55);color:#F3EFE6;border:1px solid rgba(243,239,230,.4);padding:9px 14px;cursor:pointer;backdrop-filter:blur(6px)}
+.ui button:hover{border-color:var(--ochre);color:var(--ochre)}
+.prog{position:fixed;left:0;bottom:0;height:2px;background:var(--ochre);z-index:10;width:0;transition:width .3s}
+.r{opacity:0;transform:translateY(18px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
+.in .r{opacity:1;transform:none}
+.in .r:nth-child(2){transition-delay:.08s}.in .r:nth-child(3){transition-delay:.16s}.in .r:nth-child(4){transition-delay:.24s}
+@media (prefers-reduced-motion:reduce){.r{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+
+/* телефон */
+@media (max-width:820px){
+  html{scroll-snap-type:none}
+  :root{--u:4px}
+  .slide{height:auto;display:block}
+  .stage{width:100%;height:auto;min-height:0;padding:56px 16px 44px}
+  .corner{left:16px;right:16px;top:18px}
+  h1{font-size:40px}
+  h2{font-size:26px;max-width:100%;margin:14px 0 20px}
+  .statement{font-size:30px;max-width:100%;margin-top:12px}
+  .big,.kpis .big{font-size:42px}
+  .cover .stage{min-height:92vh;justify-content:flex-end}
+  .cover h1,.cover .sub{max-width:100%}.cover .sub{font-size:17px}
+  .grid2,.grid3,.trio,.mult,.kpis,.cards,.mech,.year,.plan,.legend{grid-template-columns:1fr;gap:18px}
+  .legend b{font-size:22px}
+  .funnel{grid-template-columns:1fr;gap:0}
+  .step{height:auto!important;border-left:0;padding:12px 0 10px}
+  .step .n{font-size:26px}
+  .plate{grid-template-columns:1fr;gap:6px}
+  .concl{max-width:100%;margin-top:24px}
+  .trio{margin-top:28px}
+  table,thead,tbody,tr,th,td{display:block}
+  thead{display:none}
+  tr{border-top:1px solid rgba(43,45,47,.25);padding:10px 0}
+  .dark tr{border-color:rgba(243,239,230,.25)}
+  td{border:0;padding:2px 0}
+  td[data-l]::before{content:attr(data-l);display:block;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--gray);margin-top:6px}
+  .vs h3{font-size:24px}
+  .year h3{font-size:22px}
+  .plan .m{font-size:24px}
+  .cut{display:none}
+  .ridge{margin:16px 0}
+  .final .stage{min-height:80vh}
+  .ui{bottom:14px}
+  .final .bgimg{background-size:cover!important;background-position:30% 100%!important}
+  .ui .nav{display:none}
+}
+
+/* печать в PDF: слайд на страницу */
+@media print{
+  @page{size:1920px 1080px;margin:0}
+  :root{--u:19.2px}
+  html,body{background:none;scroll-snap-type:none}
+  *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .slide{height:1080px;width:1920px;display:block;break-after:page;page-break-after:always}
+  .stage{width:1920px;height:1080px}
+  .ui,.prog{display:none}
+  .r{opacity:1!important;transform:none!important;transition:none!important}
+}
+</style>
+</head>
+<body>
+
+<div class="ui">
+  <button class="nav" onclick="go(-1)" aria-label="Предыдущий слайд">↑</button>
+  <button class="nav" onclick="go(1)" aria-label="Следующий слайд">↓</button>
+  <button onclick="window.print()">Скачать PDF</button>
+</div>
+<div class="prog" id="prog"></div>
+
+<!-- 01 -->
+<section class="slide dark cover">
+  <div class="stage">
+    <div class="bgimg" style="background-image:url(img/everest.jpg)"></div>
+    <div class="corner"><span class="lab">Горный Портал</span><span class="lab">Стратегия · 2027</span></div>
+    <h1 class="r">От первого шага до своей вершины</h1>
+    <p class="sub r">Стратегия роста Instagram и Telegram «Горного Портала» на 12 месяцев</p>
+    <p class="lab by r">Полина Данилова · SMM и контент-продюсер · ноябрь 2026</p>
+  </div>
+</section>
+
+<!-- 02 -->
+<section class="slide milk">
+  <div class="stage">
+    <div class="corner"><span class="lab">02 · Главная мысль</span><span class="lab">Горный Портал</span></div>
+    <p class="statement r">Подписчики не цель.<br>Цель — <em>заявки и выручка.</em></p>
+    <div class="trio">
+      <div class="r"><span class="num">01</span><p>Соцсети работают как вход в воронку продаж, а не как витрина ради цифры в профиле.</p></div>
+      <div class="r"><span class="num">02</span><p>Instagram приводит новых людей. Telegram превращает их в участников экспедиций.</p></div>
+      <div class="r"><span class="num">03</span><p>Каждое действие в плане привязано к метрике заявки, стоимости клиента или выручки.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 03 -->
+<section class="slide dark green">
+  <div class="stage">
+    <div class="corner"><span class="lab">03 · Точка А</span><span class="lab">по открытым данным, 23.11.2026</span></div>
+    <div class="kpis">
+      <div class="r"><div class="big">33,6<span class="muted" style="font-size:.45em"> тыс.</span></div><span class="lab">Instagram</span></div>
+      <div class="r"><div class="big ochre">4,3<span style="font-size:.45em"> тыс.</span></div><span class="lab">Telegram</span></div>
+      <div class="r"><div class="big">13<span class="muted" style="font-size:.45em"> лет</span></div><span class="lab">в горах</span></div>
+    </div>
+    <div class="grid2 flex1">
+      <div class="r">
+        <p class="lab" style="margin-bottom:calc(var(--u)*.6)">Что уже сильно</p>
+        <ul class="lines">
+          <li>18 гидов и один гид на трёх участников</li>
+          <li>Лестница программ до «7 вершин» и 8000+</li>
+          <li>Клуб на 600+ человек, тренировки и забеги</li>
+          <li>Свой фильм «Метанойя. Путь через Эверест»</li>
+          <li>Предоплата 30% и оплата долями</li>
+        </ul>
+      </div>
+      <div class="r">
+        <p class="lab" style="margin-bottom:calc(var(--u)*.6)">Что вижу в аудите</p>
+        <ul class="lines">
+          <li>Telegram почти в 8 раз меньше Instagram</li>
+          <li>Посты в Telegram набирают 289–722 просмотра</li>
+          <li>На сайте нет теста подбора маршрута и бота</li>
+          <li>Цифры о компании в профилях разные (5000+ и 4500+)</li>
+        </ul>
+      </div>
+    </div>
+    <p class="concl r">Главная потеря аудитории происходит между площадками. Её и закрываем первой.</p>
+  </div>
+</section>
+
+<!-- 04 -->
+<section class="slide milk">
+  <div class="stage">
+    <div class="corner"><span class="lab">04 · Математика роста</span><span class="lab">цели — ориентиры</span></div>
+    <div class="mult">
+      <div class="r"><div class="big">×3</div><p class="muted">= +9,6% подписчиков<br>каждый месяц</p></div>
+      <div class="r"><div class="big ochre">×4</div><p class="muted">= +12,2% подписчиков<br>каждый месяц</p></div>
+      <div class="r"><ul class="lines">
+        <li><b>Instagram</b> 33,6 → 100–135 тыс.</li>
+        <li><b>Telegram</b> 4,3 → 13–17 тыс.</li>
+      </ul></div>
+    </div>
+    <p class="lab r" style="margin-top:calc(var(--u)*3)">Из чего собираем рост · доли — гипотеза до аудита</p>
+    <div class="stack r">
+      <span style="width:35%;background:var(--forest)"></span>
+      <span style="width:25%;background:#4F6B5C"></span>
+      <span style="width:15%;background:var(--ochre)"></span>
+      <span style="width:15%;background:var(--gray)"></span>
+      <span style="width:10%;background:#C9C3B6"></span>
+    </div>
+    <div class="legend r">
+      <div><b>35%</b><span class="sw" style="background:var(--forest)"></span>Reels и рекомендации Instagram</div>
+      <div><b>25%</b><span class="sw" style="background:#4F6B5C"></span>Блогеры и посевы в Telegram и VK</div>
+      <div><b>15%</b><span class="sw" style="background:var(--ochre)"></span>Участники и Клуб, отзывы, «приведи друга»</div>
+      <div><b>15%</b><span class="sw" style="background:var(--gray)"></span>Telegram Ads и VK Реклама</div>
+      <div><b>10%</b><span class="sw" style="background:#C9C3B6"></span>Партнёры, снаряжение и беговые клубы</div>
+    </div>
+    <p class="concl r">Одной органикой ×3–4 за год не получится. Рост держим каждый месяц, даже в межсезонье.</p>
+  </div>
+</section>
+
+<!-- 05 -->
+<section class="slide milk">
+  <div class="stage" style="background:var(--milk2)">
+    <div class="corner"><span class="lab">05 · Аудитория</span><span class="lab">сегменты</span></div>
+    <h2 class="r">Пять сегментов и пять разных страхов</h2>
+    <table class="r">
+      <thead><tr><th style="width:17%">Сегмент</th><th style="width:22%">Кто это</th><th style="width:19%">Барьер</th><th style="width:21%">Что хочет увидеть</th><th>Вход в продукт</th></tr></thead>
+      <tbody>
+        <tr><td><b>Первая высота</b></td><td data-l="Кто это">28–45 лет, работают, спорт для себя, в больших горах не были</td><td data-l="Барьер">«Не потяну, страшно»</td><td data-l="Что хочет увидеть">Подготовку, гидов, таких же новичков</td><td data-l="Вход">Трекинги, Ликийская тропа, Эльбрус</td></tr>
+        <tr><td><b>Коллекционеры вершин</b></td><td data-l="Кто это">Уже были на Эльбрусе или Килиманджаро</td><td data-l="Барьер">«Надёжны ли гиды на высоте»</td><td data-l="Что хочет увидеть">Экспертизу и безопасность</td><td data-l="Вход">Аконкагуа, Island Peak, «7 вершин», 8000+</td></tr>
+        <tr><td><b>Ищущие перемен</b></td><td data-l="Кто это">Выгорание, переломный момент, нужна перезагрузка</td><td data-l="Барьер">«А мне это поможет?»</td><td data-l="Что хочет увидеть">Истории людей до и после</td><td data-l="Вход">Кора вокруг Кайласа, Непал, Тибет</td></tr>
+        <tr><td><b>Семьи</b></td><td data-l="Кто это">Родители с детьми</td><td data-l="Барьер">«Безопасно ли детям»</td><td data-l="Что хочет увидеть">Как устроен день, кто рядом</td><td data-l="Вход">Семейные походы</td></tr>
+        <tr><td><b>Компании</b></td><td data-l="Кто это">HR и собственники</td><td data-l="Барьер">«Сложно организовать»</td><td data-l="Что хочет увидеть">Готовый формат под ключ</td><td data-l="Вход">Групповые выезды · гипотеза, уточнить</td></tr>
+      </tbody>
+    </table>
+    <p class="concl r">Самый большой объём роста — первая высота. Им нужен не красивый вид, а ответ на страх.</p>
+  </div>
+</section>
+
+<!-- 06 -->
+<section class="slide dark green">
+  <div class="stage">
+    <div class="corner"><span class="lab">06 · Позиционирование</span><span class="lab">идея</span></div>
+    <h2 class="r">Своя вершина. Шаг за шагом</h2>
+    <svg class="ridge r" viewBox="0 0 1000 250" role="img" aria-label="Лестница вершин от первого трекинга до 8000 метров">
+      <polyline points="0,240 90,225 150,232 230,170 300,190 410,128 480,150 600,96 680,120 820,30 900,70 1000,60" fill="none" stroke="#F3EFE6" stroke-width="1.3"/>
+      <g fill="#C8792B"><circle cx="150" cy="232" r="5"/><circle cx="230" cy="170" r="5"/><circle cx="410" cy="128" r="5"/><circle cx="600" cy="96" r="5"/><circle cx="820" cy="30" r="5"/></g>
+      <g font-size="15" font-weight="500" letter-spacing="1.5">
+        <text x="150" y="212" text-anchor="middle">ПЕРВЫЙ ТРЕКИНГ</text>
+        <text x="230" y="150" text-anchor="middle">ЭЛЬБРУС 5642</text>
+        <text x="410" y="108" text-anchor="middle">КИЛИМАНДЖАРО 5895</text>
+        <text x="600" y="76" text-anchor="middle">АКОНКАГУА 6962</text>
+        <text x="820" y="14" text-anchor="middle">8000+</text>
+      </g>
+    </svg>
+    <div class="grid3">
+      <div class="r"><h3>Безопасно</h3><p class="muted">Один гид на трёх участников и 13 лет опыта. Это ответ на главный страх.</p></div>
+      <div class="r"><h3>По-человечески</h3><p class="muted">Клуб, тренировки, живые истории участников вместо рекламных обещаний.</p></div>
+      <div class="r"><h3>Про перемены</h3><p class="muted">«В горы за трансформацией» — это уже голос компании. Усиливаем его историями.</p></div>
+    </div>
+    <p class="concl r">Продаём не тур, а следующую ступень. Клиент Эльбруса — будущий клиент Килиманджаро.</p>
+  </div>
+</section>
+
+<!-- 07 -->
+<section class="slide milk">
+  <div class="stage">
+    <div class="corner"><span class="lab">07 · Контентная матрица</span><span class="lab">5 направлений</span></div>
+    <h2 class="r">У каждой рубрики своя задача в воронке</h2>
+    <table class="r">
+      <thead><tr><th style="width:22%">Направление</th><th style="width:22%">Задача</th><th>Форматы</th><th style="width:8%">Доля</th></tr></thead>
+      <tbody>
+        <tr><td><b>Вершина и путь</b></td><td data-l="Задача">Охват и вау</td><td data-l="Форматы">Reels с маршрутов, штурм, рассвет на высоте</td><td data-l="Доля" class="ochre">25%</td></tr>
+        <tr><td><b>Истории участников</b></td><td data-l="Задача">Доверие, «я тоже смогу»</td><td data-l="Форматы">Интервью, до и после, видео самих участников</td><td data-l="Доля" class="ochre">25%</td></tr>
+        <tr><td><b>Экспертиза гидов</b></td><td data-l="Задача">Снять страх</td><td data-l="Форматы">Подготовка, снаряжение, высотная болезнь, ошибки новичков</td><td data-l="Доля" class="ochre">20%</td></tr>
+        <tr><td><b>Закулисье и Клуб</b></td><td data-l="Задача">Живой бренд</td><td data-l="Форматы">Тренировки, забеги, лагерь, гиды вне маршрута</td><td data-l="Доля" class="ochre">15%</td></tr>
+        <tr><td><b>Продукт</b></td><td data-l="Задача">Продажа</td><td data-l="Форматы">Даты, программы, оплата долями, ранние места</td><td data-l="Доля" class="ochre">15%</td></tr>
+      </tbody>
+    </table>
+    <div class="bottom r" style="padding-top:calc(var(--u)*1.6)">
+      <p class="lab" style="margin-bottom:calc(var(--u)*.6)">Пример недели в Instagram</p>
+      <div class="grid3" style="grid-template-columns:repeat(5,1fr);gap:calc(var(--u)*1.4)">
+        <p><b>ПН</b> экспертный Reels</p><p><b>СР</b> история участника</p><p><b>ПТ</b> атмосфера</p><p><b>ВС</b> продукт</p><p><b>Каждый день</b> сторис</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 08 -->
+<section class="slide dark graph">
+  <div class="stage">
+    <div class="corner"><span class="lab">08 · Reels</span><span class="lab">примеры форматов</span></div>
+    <h2 class="r">Шесть роликов, каждый ведёт к одному действию</h2>
+    <div class="cards flex1">
+      <div class="card r"><span class="lab">История участника</span><p class="hook">«Я офисный менеджер. Через 9 дней я стоял на Эльбрусе»</p><p>Первая высота · доверие</p></div>
+      <div class="card r"><span class="lab">Экспертный</span><p class="hook">«Гид отвечает, что будет с тобой на 5000 метров»</p><p>Снять страх · сохранения</p></div>
+      <div class="card r"><span class="lab">Разбор цены</span><p class="hook">«Сколько на самом деле стоит Эльбрус»</p><p>Снять ценовой барьер · переход в Telegram</p></div>
+      <div class="card r"><span class="lab">Список от гида</span><p class="hook">«5 вещей, которые новички зря берут в горы»</p><p>Сохранения и пересылки</p></div>
+      <div class="card r"><span class="lab">Атмосфера</span><p class="hook">«Рассвет на высоте 5642» без слов</p><p>Охват и рекомендации</p></div>
+      <div class="card r"><span class="lab">Интерактив</span><p class="hook">«Какая вершина твоя? Тест в Telegram»</p><p>Переход в бот</p></div>
+    </div>
+    <p class="note r" style="margin-top:calc(var(--u)*1.4)">Это примеры форматов. Героев берём из реальных участников.</p>
+  </div>
+</section>
+
+<!-- 09 -->
+<section class="slide milk">
+  <div class="stage">
+    <div class="corner"><span class="lab">09 · Роли площадок</span><span class="lab">Instagram и Telegram</span></div>
+    <div class="grid2 vs" style="margin-top:calc(var(--u)*3)">
+      <div class="r">
+        <h3>Instagram</h3><p class="lab" style="margin-bottom:calc(var(--u)*1)">витрина и охват</p>
+        <ul class="lines">
+          <li>Reels 4–5 в неделю</li>
+          <li>Совместные публикации с участниками без оплаты</li>
+          <li>Видео самих участников, сторис с опросами</li>
+          <li class="muted">Метрики · охват неподписчиков, сохранения, переходы в бот</li>
+        </ul>
+        <p class="note" style="margin-top:calc(var(--u)*.8)">Рекламу и платные интеграции здесь не делаем. С 1.09.2025 это запрещено законом.</p>
+      </div>
+      <div class="r">
+        <h3>Telegram</h3><p class="lab" style="margin-bottom:calc(var(--u)*1)">доверие и продажа</p>
+        <ul class="lines">
+          <li>Дневник подготовки к восхождению</li>
+          <li>Кружочки гидов, эфиры, ответы на вопросы</li>
+          <li>Отзывы и закрытые анонсы новых дат</li>
+          <li class="muted">Метрики · переходы на сайт, заявки, конверсия в консультацию</li>
+        </ul>
+      </div>
+    </div>
+    <div class="plate r">
+      <span class="lab">Как растёт Telegram</span>
+      <p>Ленты рекомендаций там нет. Подписчики приходят из Instagram через тест в боте, посевы в travel- и спорт-каналах, взаимные коллаборации и Telegram Ads.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 10 -->
+<section class="slide dark green">
+  <div class="stage">
+    <div class="corner"><span class="lab">10 · Воронка</span><span class="lab">набор высоты</span></div>
+    <h2 class="r" style="margin-bottom:0">От первого просмотра до следующей вершины</h2>
+    <div class="funnel">
+      <div class="step r" style="--h:30%"><div class="n">1</div><h3>Увидел Reels</h3><p>охват</p></div>
+      <div class="step r" style="--h:38%"><div class="n">2</div><h3>Зашёл в профиль</h3><p>переходы</p></div>
+      <div class="step r" style="--h:46%"><div class="n">3</div><h3>Прошёл тест в боте</h3><p>контакт</p></div>
+      <div class="step r" style="--h:54%"><div class="n">4</div><h3>Прогрев в Telegram 1–3 мес.</h3><p>открытия, ответы</p></div>
+      <div class="step r" style="--h:62%"><div class="n">5</div><h3>Консультация</h3><p>заявка</p></div>
+      <div class="step r" style="--h:70%"><div class="n">6</div><h3>Предоплата 30% или доли</h3><p>выручка</p></div>
+      <div class="step r" style="--h:80%"><div class="n">7</div><h3>Восхождение</h3><p>видео, отзыв</p></div>
+      <div class="step r" style="--h:90%"><div class="n">8</div><h3>Клуб и следующая вершина</h3><p>повторная покупка, «приведи друга»</p></div>
+    </div>
+    <div class="loop r"><i></i><span class="lab" style="color:var(--ochre)">Участники запускают воронку заново</span></div>
+  </div>
+</section>
+
+<!-- 11 -->
+<section class="slide milk">
+  <div class="stage">
+    <img class="cut" src="img/team1.jpg" alt="">
+    <div class="corner"><span class="lab">11 · Механики</span><span class="lab">привлечение</span></div>
+    <h2 class="r">Семь механик, которые приводят людей в воронку</h2>
+    <ul class="lines mech flex1">
+      <li class="r"><span class="k">01</span><p><b>Тест «Какая вершина твоя»</b> в Telegram-боте. 5–7 вопросов, в ответ маршрут и запись на консультацию. У компании такого пока нет.</p></li>
+      <li class="r"><span class="k">02</span><p><b>Сериал «С нуля до Эльбруса».</b> Новичок 8–10 недель тренируется с Клубом и в финале идёт на вершину.</p></li>
+      <li class="r"><span class="k">03</span><p><b>Чек-лист первого восхождения.</b> Тренировки и снаряжение, выдаём в боте.</p></li>
+      <li class="r"><span class="k">04</span><p><b>Блогеры в Telegram и VK.</b> Спорт, бег, travel 10–100 тыс., место в экспедиции за серию контента.</p></li>
+      <li class="r"><span class="k">05</span><p><b>Партнёры.</b> Магазины снаряжения, беговые и трейл-клубы, фитнес-студии.</p></li>
+      <li class="r"><span class="k">06</span><p><b>«Приведи друга».</b> Бонус обоим на маршрут. Гипотеза, условия согласовать.</p></li>
+      <li class="r"><span class="k">07</span><p><b>Новые даты сначала в Telegram.</b> Повод подписаться. Гипотеза, согласовать.</p></li>
+    </ul>
+  </div>
+</section>
+
+<!-- 12 -->
+<section class="slide dark graph">
+  <div class="stage">
+    <div class="corner"><span class="lab">12 · Сезонность и риски</span><span class="lab">сроки сверить со статистикой</span></div>
+    <h2 class="r">Год гор и три риска, которые учитываем заранее</h2>
+    <div class="year r">
+      <div style="--c:#9FB4C7"><h3>Зима</h3><p>Аконкагуа, Килиманджаро, новогодняя Ликийская тропа. Набор в программы следующего года.</p></div>
+      <div style="--c:#7E9C84"><h3>Весна</h3><p>Продажи летнего Эльбруса, Алтая, Кавказа, Непала.</p></div>
+      <div style="--c:var(--ochre)"><h3>Лето</h3><p>Сезон. Максимум видео с маршрутов, сбор отзывов.</p></div>
+      <div style="--c:var(--gray)"><h3>Осень</h3><p>Итоги сезона, анонсы «Горы 2027».</p></div>
+    </div>
+    <ul class="lines r">
+      <li><b>Реклама в Instagram запрещена с 1.09.2025.</b> Включая бартер у блогеров. Там только свой контент и участники.</li>
+      <li><b>Telegram в России замедляют с февраля 2026.</b> Страхуемся ботом, базой контактов, VK и Max.</li>
+      <li><b>Межсезонье проседает.</b> Закрываем его контентом подготовки и жизнью Клуба.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- 13 -->
+<section class="slide milk">
+  <div class="stage">
+    <div class="corner"><span class="lab">13 · План и KPI</span><span class="lab">12 месяцев</span></div>
+    <h2 class="r" style="margin-bottom:calc(var(--u)*1.8)">Пять этапов и метрики, по которым видно деньги</h2>
+    <div class="plan r">
+      <div><span class="m">1</span><p>Аудит, данные, сегменты, тон. UTM на все ссылки, единые цифры в профилях.</p></div>
+      <div><span class="m">2–3</span><p>Reels 4–5 в неделю, бот с тестом, первые посевы.</p><span class="t note">рост охвата и переходов в бот</span></div>
+      <div><span class="m">4–6</span><p>Сериал «С нуля до Эльбруса», продажи летнего сезона.</p><span class="t note">первые заявки по UTM</span></div>
+      <div><span class="m">7–9</span><p>Сезон, видео участников, отзывы, «приведи друга».</p><span class="t note">растёт доля заявок из соцсетей</span></div>
+      <div><span class="m">10–12</span><p>Масштабируем то, что окупилось, анонсы нового года.</p><span class="t note">×3–4 и понятная цена заявки</span></div>
+    </div>
+    <div class="grid2 r" style="gap:calc(var(--u)*4)">
+      <div><p class="lab" style="margin-bottom:calc(var(--u)*.5)">Маркетинговые</p><ul class="lines kpi2"><li>Охват неподписчиков</li><li>Сохранения и пересылки</li><li>Рост подписчиков в месяц</li><li>Переходы из Instagram в Telegram и прохождения теста</li></ul></div>
+      <div><p class="lab ochre" style="margin-bottom:calc(var(--u)*.5)">Бизнес · главные</p><ul class="lines kpi2"><li>Целевые заявки из соцсетей и стоимость заявки</li><li>Конверсия заявки в бронь</li><li>Стоимость клиента и выручка с соцсетей</li><li>Доля повторных клиентов, следующая вершина</li></ul></div>
+    </div>
+    <p class="note r" style="margin-top:calc(var(--u)*1)">Все цифры — целевые ориентиры. Точные считаем после аудита.</p>
+    <p class="concl r">Подписчики растут как следствие. Успех считаем по заявкам и выручке.</p>
+  </div>
+</section>
+
+<!-- 14 -->
+<section class="slide milk">
+  <div class="stage" style="background:var(--milk2)">
+    <div class="corner"><span class="lab">14 · Гипотезы и данные</span><span class="lab">первый месяц</span></div>
+    <div class="grid2 flex1" style="margin-top:calc(var(--u)*2)">
+      <div class="r">
+        <h2 style="font-size:calc(var(--u)*2.6);margin-top:0">Что тестирую первым</h2>
+        <ul class="lines">
+          <li>Ролики про страхи новичков дают больше переходов, чем атмосферные. <span class="muted">Сравниваем 4 недели.</span></li>
+          <li>Тест «какая вершина твоя» приводит больше заявок, чем чек-лист. <span class="muted">A/B двух лид-магнитов.</span></li>
+          <li>Блогеры в Telegram дешевле в заявке, чем Telegram Ads. <span class="muted">Считаем по UTM.</span></li>
+          <li>Новые даты сначала в Telegram ускоряют рост канала. <span class="muted">Подписки до и после анонса.</span></li>
+        </ul>
+      </div>
+      <div class="r">
+        <h2 style="font-size:calc(var(--u)*2.6);margin-top:0">Что запрошу у компании</h2>
+        <ul class="lines">
+          <li>Статистика аккаунтов за 12 месяцев</li>
+          <li>Источники заявок за прошлый сезон</li>
+          <li>Конверсия заявки в бронь</li>
+          <li>Средний чек и маржа по маршрутам</li>
+          <li>Доля повторных клиентов</li>
+          <li>Бюджет и архив видео с маршрутов</li>
+        </ul>
+      </div>
+    </div>
+    <p class="concl r">Без этих данных любые цифры остаются гипотезами. Стратегию уточняю за первый месяц.</p>
+  </div>
+</section>
+
+<!-- 15 -->
+<section class="slide dark final">
+  <div class="stage">
+    <div class="bgimg" style="background-image:url(img/annapurna.jpg);background-position:center 85%"></div>
+    <div class="corner"><span class="lab">15 · Итог</span><span class="lab">Горный Портал</span></div>
+    <p class="statement r">Одна система.<br>Контент приводит, Telegram греет, участники возвращаются <em>за следующей вершиной.</em></p>
+    <p class="sign r">Все идеи предоставлены Даниловой Полиной Антоновной<br>Instagram @monargixx · Telegram @monargixx · +7 911 792-50-36</p>
+  </div>
+</section>
+
+<script>
+const slides=[...document.querySelectorAll('.slide')];
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in')}),{threshold:.25});
+slides.forEach(s=>io.observe(s));
+function cur(){let best=0,d=1e9;slides.forEach((s,i)=>{const t=Math.abs(s.getBoundingClientRect().top);if(t<d){d=t;best=i}});return best}
+function go(k){const i=Math.max(0,Math.min(slides.length-1,cur()+k));slides[i].scrollIntoView({behavior:'smooth'})}
+addEventListener('keydown',e=>{
+  if(['ArrowDown','ArrowRight','PageDown',' '].includes(e.key)){e.preventDefault();go(1)}
+  if(['ArrowUp','ArrowLeft','PageUp'].includes(e.key)){e.preventDefault();go(-1)}
+});
+addEventListener('scroll',()=>{document.getElementById('prog').style.width=((cur()+1)/slides.length*100)+'%'},{passive:true});
+addEventListener('beforeprint',()=>slides.forEach(s=>s.classList.add('in')));
+document.getElementById('prog').style.width=(100/slides.length)+'%';
+</script>
+</body>
+</html>
